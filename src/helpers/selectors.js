@@ -24,8 +24,6 @@ export function getAppointmentsForDay(state, day) {
   }
 
 export function getInterview(state, interview) {
-  console.log("THIS IS INTERVIEW 27", interview);
-  console.log("THIS IS STATE 28", state);
   if (!interview) {
     return null;
   } else {
