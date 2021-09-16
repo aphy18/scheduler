@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 
 export default function(props) {
-  console.log("show -->", props)
+  console.log("show 5 -->", props)
     return (
       <main className="appointment__card appointment__card--show">
         <section className="appointment__card-left">

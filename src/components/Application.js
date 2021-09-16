@@ -84,14 +84,11 @@ export default function Application(props) {
     setDay,
     bookInterview,
     cancelInterview,
-    updateSpots
   } = useApplicationData();
-
-  console.log("THIS IS STATE 89", state);
+  
   const interviewers = getInterviewersForDay(state, state.day);
   const appointments = getAppointmentsForDay(state, state.day).map(
     appointment => {
-      console.log("STATE AND APPOINTMENT 93 -->", getInterview(state, appointment.interview))
       return (
         <Appointment
           key={appointment.id}
