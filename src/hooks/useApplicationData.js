@@ -40,7 +40,7 @@ export default function useApplicatonData() {
   }
 
   function cancelInterview(id) {
-    return axios.delete(`/api/appointments/${id}`)
+    return axios.delete(`/apillll/appointments/${id}`)
       .then(() => {
         const appointment = {
           ...state.appointments[id],
@@ -74,6 +74,9 @@ export default function useApplicatonData() {
       axios.get(appointmentsURL),
       axios.get(interviewersURL),
     ]).then((all) => {
+      console.log("77 ALL[0]", all[0].data)
+      console.log("78 Appointments",all[1].data)
+      console.log("79 Interviewers",all[2].data)
       setState(prev => ({
         ...prev,
         days: all[0].data,

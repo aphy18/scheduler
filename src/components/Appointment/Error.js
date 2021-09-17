@@ -7,11 +7,13 @@ export default function Error(props) {
           <h1 className="text--semi-bold">Error</h1>
           <h3 className="text--light">Could not delete appointment</h3>
         </section>
+        <button onClick={props.onCancel}>
         <img
           className="appointment__error-close"
           src="images/close.png"
           alt="Close"
         />
+        </button>
        </main>
     )
 }

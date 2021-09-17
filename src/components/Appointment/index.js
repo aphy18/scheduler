@@ -4,7 +4,8 @@ import Show from "./Show";
 import Empty from "./Empty";
 import Form from "./Form";
 import Status from "./Status";
-import Confirm from "./Confirm"
+import Confirm from "./Confirm";
+import Error from "./Error";
 import useVisualMode  from "../../hooks/useVisualMode";
 
 const EMPTY = "EMPTY";
@@ -83,6 +84,9 @@ export default function Appointment(props) {
       )}
       {mode === SAVING && (
         <Status message="Saving" />
+      )}
+      {mode === ERROR_DELETE && (
+        <Error message={"Could not delete appointment"} onCancel={() => transition(SHOW)} />
       )}
        </Fragment>
     )
