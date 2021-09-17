@@ -40,7 +40,7 @@ export default function useApplicatonData() {
   }
 
   function cancelInterview(id) {
-    return axios.delete(`/apillll/appointments/${id}`)
+    return axios.delete(`/api/appointments/${id}`)
       .then(() => {
         const appointment = {
           ...state.appointments[id],
