@@ -56,13 +56,16 @@ export default function Appointment(props) {
         props.interview ? SHOW : EMPTY
       );
 
+       
+ 
     return (
+      
         <Fragment>
         <Header
         time={props.time} />
-
+      
         {mode === EMPTY && props.time !== "5pm" && <Empty onAdd={() => transition(CREATE)} />}
-        {mode === SHOW && (
+        {mode === SHOW && props.interview && (
         <Show
         student={props.interview.student}
         interviewer={props.interview.interviewer}
@@ -88,6 +91,10 @@ export default function Appointment(props) {
       {mode === ERROR_DELETE && (
         <Error message={"Could not delete appointment"} onCancel={() => transition(SHOW)} />
       )}
+      {mode === ERROR_SAVE && (
+        <Error message={"Could not save appointment"} onCancel={() => transition(EMPTY)} />
+      )}
+
        </Fragment>
     )
 }
