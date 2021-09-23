@@ -11,7 +11,7 @@ export default function useVisualMode(initial) {
           const newHistory = [...history];
           newHistory.pop();
           
-          setHistory(prevHistory => [...newHistory, newMode]);
+          setHistory( prevHistory => [...prevHistory.slice(0,prevHistory.length - 1, newMode)]);
           setMode(newMode);
         } else {
           setHistory(prevHistory => [...prevHistory, newMode]);
