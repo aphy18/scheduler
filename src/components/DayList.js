@@ -5,7 +5,6 @@ import DayListItem from './DayListItem';
 // DayList renders a list of DayListItem components
 
 export default function DayList(props) {
-  console.log(props)
   const schedule = props.days.map(day => {
  
     return (

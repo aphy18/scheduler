@@ -92,7 +92,7 @@ export default function Appointment(props) {
         <Error message={"Could not delete appointment"} onCancel={() => transition(SHOW)} />
       )}
       {mode === ERROR_SAVE && (
-        <Error message={"Could not save appointment"} onCancel={() => transition(EMPTY)} />
+        <Error message={"Could not save appointment"} onCancel={() => transition(CREATE)} />
       )}
 
        </Fragment>
